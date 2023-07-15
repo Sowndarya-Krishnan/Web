@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sowndarya portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4f5858a434.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header"> 
@@ -67,14 +68,61 @@
 <!-----------Project------------>
     <div class="project">
         <div class="container">
+            <div class="row">
+               <div class="about-col-3"> 
+                    <h2 class="sub-title1"><span>Personal WebPage</span></h2>
+                    <p class="content-1">Personal web pages are World Wide Web pages created by an individual to contain content of a personal nature rather than content pertaining to a company, organization or institution. Personal web pages are primarily used for informative or entertainment purposes but can also be used for personal career marketing (by containing a list of the individual's skills, experience and a CV), social networking with other people with shared interests, or as a space for personal expression.</p>
+                    <nav class="list-1">
+                        <ul>
+                            <li>Languages: HTML,CSS</li>
+                            <li>Tool used: VS Code</li>
+                            <li>Duration : 7 Days</li>
+                        </ul>
+                    </nav>
+                    <h2 class="sub-title2"><span>Smart Guidance for Visually Impaired Persons <br>(Literature Survey)</span></h2>
+                    <p class="content-2">This device helps visually impaired persons to reach their destination without the help of others using a raspberry pi microcontroller, ultra sonic sensor and a ear phone. Which may make them feel free to reach their destination. (Done a literature survey of this project as a team).</p>
+                    <nav class="list-2">
+                        <ul>
+                            <li>Languages: Python,Dot Net</li>
+                            <li>Tool used: Ultra Sonic Sensor,Audio Jack,Mobile,IDLE.</li>
+                            <li>Duration : 6 Months</li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="about-col-4"> 
+                    <img src="image/pt.png" class="proj">
+                </div>
+           </div>
             
         </div>
     </div>
+<!---------Contact-------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact ME</h1>
+                    <p><i class="fas fa fa-paper-plane"></i>sowndarya09032002@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i>9361449813</p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/_sowndhu_2002_?igshid=NGExMmI2YTkyZg=="><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/sowndarya-krishnan-ab23731b1"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Sowndarya-Krishnan"><i class="fa-brands fa-square-github"></i></a>
+                    </div>
+                    <a href="image/Sowndarya Resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                         <input type="text" name="Name" placeholder="Your Name" required>
+                         <input type="email" name="email" placeholder="Your Email" required>
+                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                         <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-</body>
-</html>
-
---------CSS---------
+-------------------------------------------------------------------------CSS--------------------------------------------------------------------------------------
 *{
     margin: 0;
     padding: 0;
@@ -218,4 +266,130 @@ nav ul li a:hover::after{
 #project{
     padding: 20px 0;
     color: #abababe2;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-3
+{
+   flex-basis: 60%;
+}
+.about-col-4 img{
+    flex-basis: 35%;   
+    border-radius: 15px;
+}
+.about-col-4{
+    width: 50;
+    border-radius: 19px;
+}
+.sub-title1 span{
+    margin: 10px;
+    color: #fe6afe;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.content-1{
+    margin: 10px;
+    font-style: oblique;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.list-1{
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.list-1 ul li{
+    display:block;
+    list-style:disc;
+    margin: 10px;
+    font-style: oblique;
+    font-size: medium;
+}
+.sub-title2 span{
+    margin: 10px;
+    color: #fe6afe;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex-wrap: nowrap;
+}
+.content-2{
+    margin: 10px;
+    font-style: oblique;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.list-2{
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.list-2 ul li{
+    display:block;
+    list-style:disc;
+    margin: 10px;
+    font-style: oblique;
+    font-size: medium;
+}
+/*---------------contact----------------*/
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top:30px;
+}
+.contact-left p i{
+    color: #fe6afe;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color:#abababe2 ;
+    display: inline-block;
+    transition: trasform(0.5s);
+}
+.social-icons a:hover{
+    color: #fe6afe;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    margin-top: 10px;
+    padding: 10px;
+    display: inline-block;
+    background: #fe6afe;
+    color: #080808;
+    text-decoration: none;
+    font-style: italic;
+    border-radius: 15px;
+}
+.contact-right form{
+    width: 100%;
+}
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size:18px;
+    border-radius: 6px ;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
 }
