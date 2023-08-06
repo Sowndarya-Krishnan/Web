@@ -97,11 +97,11 @@
         </div>
     </div>
 <!---------Contact-------->
-    <div id="contact">
+     <div id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
-                    <h1 class="sub-title">Contact ME</h1>
+                    <h1 class="sub-title">Contact Me</h1>
                     <p><i class="fas fa fa-paper-plane"></i>sowndarya09032002@gmail.com</p>
                     <p><i class="fa-solid fa-phone-volume"></i>9361449813</p>
                     <div class="social-icons">
@@ -109,19 +109,66 @@
                         <a href="https://www.linkedin.com/in/sowndarya-krishnan-ab23731b1"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://github.com/Sowndarya-Krishnan"><i class="fa-brands fa-square-github"></i></a>
                     </div>
-                    <a href="image/Sowndarya Resume.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                          <input type="text" name="Name" placeholder="Your Name" required>
-                         <input type="email" name="email" placeholder="Your Email" required>
+                         <input type="email" name="Email" placeholder="Your Email" required>
                          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                         <button type="submit" class="btn btn2">submit</button>
+                         <button type="submit" class="btn btn2">submit </button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
+    </div>
 
+</body>
+</html>
+-------------------------------------------------------------------------Java Script--------------------------------------------------------------------------------
+  <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby4AavPzHiAhxFLbz8Revl2e35xF3iMy0oQKUSyKlH3SNZXCcKwXEc6UYNRmRAkJx9K/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent Succesfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+   </script>
+       <script>
+            var Sidemenu = document.getElementById("sidemenu");
+
+            function openmenu(){
+                Sidemenu.style.right = "0";
+            }
+            function closemenu(){
+                Sidemenu.style.right = "-200px";
+            }
+       </script>
+   
 -------------------------------------------------------------------------CSS--------------------------------------------------------------------------------------
 *{
     margin: 0;
